@@ -1,10 +1,9 @@
 import { MessageEmbed, User } from "discord.js";
 import { HandleType } from "./HandleType"
 
-export function SendKickEmbed(kickedMember: User | any, reason?: string, author?: User, dynoStyle?: boolean | undefined): MessageEmbed {
+export function SendKickEmbed(kickedMember: User | any, reason?: string, author?: User | any, dynoStyle?: boolean | undefined): MessageEmbed {
     if (!kickedMember) throw new Error("Demilia: No member provided.");
     if (typeof reason !== "string") HandleType("string");
-    if (typeof author !== typeof User) HandleType("user");
     if (typeof dynoStyle !== "boolean") HandleType("boolean");
 
     if (dynoStyle) {

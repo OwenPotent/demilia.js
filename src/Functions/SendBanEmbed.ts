@@ -1,10 +1,9 @@
 import { MessageEmbed, User } from "discord.js";
 import { HandleType } from "./HandleType"
 
-export function SendBanEmbed(bannedMember: User | any, reason?: string, author?: User, dynoStyle?: boolean | undefined): MessageEmbed {
+export function SendBanEmbed(bannedMember: User | any, reason?: string, author?: User | any, dynoStyle?: boolean | undefined): MessageEmbed {
     if (!bannedMember) throw new Error("Demilia: No member provided.");
     if (typeof reason !== "string") HandleType("string");
-    if (typeof author !== typeof User) HandleType("user");
     if (typeof dynoStyle !== "boolean") HandleType("boolean");
 
     if (dynoStyle) {
