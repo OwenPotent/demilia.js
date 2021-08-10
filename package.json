@@ -1,6 +1,6 @@
 {
   "name": "demilia.js",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "A utility package mostly focusing on implementing fun and useful functions/classes for discord.js",
   "main": "dist/index.js",
   "scripts": {
